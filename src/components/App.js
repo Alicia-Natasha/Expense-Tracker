@@ -11,6 +11,11 @@ function App() {
     setExpenses([...expenses, newExpense]);
   };
 
+  const filteredExpenses = expenses.filter(
+    exp => exp.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+           exp.description.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <div className="App">
      
