@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import SearchBar from './SearchBar';
-import ExpenseForm from './ExpenseForm';
+import React, { useState } from "react";
 import ExpenseTable from './ExpenseTable';
-
+import ExpenseForm from './ExpenseForm';
+import SearchBar from './SearchBar';
 
 function App() {
   const [expenses, setExpenses] = useState([]);
@@ -18,14 +17,14 @@ function App() {
     setExpenses(updated);
   };
 
-  // Filter first
+  // ✅ Filter first
   const filteredExpenses = expenses.filter(
     exp =>
       exp.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       exp.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  // Then sort
+  // ✅ Then sort
   const sortedExpenses = [...filteredExpenses].sort((a, b) => {
     if (sortField === 'description') {
       return a.description.localeCompare(b.description);
@@ -37,15 +36,17 @@ function App() {
   });
 
   return (
-    <div className="app">
-    <h1>Expense Tracker</h1>
-    <SearchBar search={search} setSearch={setSearch} />
-    <ExpenseForm onAdd={addExpense} />
-    <ExpenseTable
-      expenses={filteredExpenses}
-      onDelete={deleteExpense}
-    />
-  </div>
+    <div style={{ padding: '20px' }}>
+      <h1>Expense Tracker</h1>
+      <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+      <ExpenseForm addExpense={addExpense} />
+      <select onChange={(e) => setSortField(e.target.value)} style={{ marginBottom: '10px' }}>
+        <option value="">-- Sort By --</option>
+        <option value="name">Name</option>
+        <option value="description">Description</option>
+      </select>
+      <ExpenseTable expenses={sortedExpenses} deleteExpense={deleteExpense} />
+    </div>
   );
 }
 
