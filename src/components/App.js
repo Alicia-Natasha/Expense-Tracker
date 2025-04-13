@@ -17,10 +17,13 @@ function App() {
   );
 
   return (
-    <div className="App">
-     
-    </div>
-  );
-}
+      <div>
+        <h1>Expense Tracker</h1>
+        <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+        <ExpenseForm addExpense={addExpense} />
+        <ExpenseTable expenses={filteredExpenses} />
+      </div>
+    );
+  }
 
 export default App;
