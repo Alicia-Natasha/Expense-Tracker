@@ -1,6 +1,6 @@
 import React from 'react'
 
-function ExpenseTable({ expenses }) {
+function ExpenseTable({ expenses, deleteExpense }) {
   return (
     <table border="1" cellPadding="10" cellSpacing="0">
     <thead>
@@ -8,12 +8,13 @@ function ExpenseTable({ expenses }) {
         <th>Name</th>
         <th>Description</th>
         <th>Amount ($)</th>
+        <th>Action</th>
       </tr>
     </thead>
     <tbody>
       {expenses.length === 0 ? (
         <tr>
-          <td colSpan="3" style={{ textAlign: 'center' }}>
+          <td colSpan="4" style={{ textAlign: 'center' }}>
             No expenses found.
           </td>
         </tr>
@@ -23,6 +24,9 @@ function ExpenseTable({ expenses }) {
             <td>{expense.name}</td>
             <td>{expense.description}</td>
             <td>{expense.amount.toFixed(2)}</td>
+            <td>
+                <button onClick={() => deleteExpense(expense.id)}>Delete</button>
+              </td>
           </tr>
         ))
       )}
