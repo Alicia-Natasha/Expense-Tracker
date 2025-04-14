@@ -56,4 +56,4 @@ Alicia Natasha
 0.1v
 
 ## License
-This project is open source and available under the MIT License
+This project is open source and available under the MIT License - see the [MIT License](./LICENSE) file for details.
