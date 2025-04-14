@@ -17,14 +17,12 @@ function App() {
     setExpenses(updated);
   };
 
-  // ✅ Filter first
   const filteredExpenses = expenses.filter(
     exp =>
       exp.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       exp.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  // ✅ Then sort
   const sortedExpenses = [...filteredExpenses].sort((a, b) => {
     if (sortField === 'description') {
       return a.description.localeCompare(b.description);
