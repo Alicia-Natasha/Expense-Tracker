@@ -9,13 +9,18 @@ A simple React-based expense tracker application. The app allows users to:
 
 ## Features
 -Add Expenses where users can add an expense by filling out a form with the name, description, and amount. The expense is added to a table on the page.
+
 -A search bar that allows users to filter expenses by name or description.
+
 -Sorting the expenses by either name or description using a dropdown menu.
+
 -Users can delete expenses, and the table will update accordingly.
 
 ## Technology Used
 React: JavaScript library for building user interfaces.
+
 CSS: Used for styling the components.
+
 Hooks: React’s useState and useEffect hooks for managing state and lifecycle.
 
 ## Running App
