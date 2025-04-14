@@ -25,7 +25,7 @@ Hooks: React’s useState and useEffect hooks for managing state and lifecycle.
 
 ## Running App
 1. Clone repository:
-git clone
+git clone [add repository link]
 
 2. Navigate to the project directory:
 cd expensetracker
