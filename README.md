@@ -13,14 +13,14 @@ A simple React-based expense tracker application. The app allows users to:
 -Sorting the expenses by either name or description using a dropdown menu.
 -Users can delete expenses, and the table will update accordingly.
 
-## Tech Stack
+## Technology Used
 React: JavaScript library for building user interfaces.
 CSS: Used for styling the components.
 Hooks: React’s useState and useEffect hooks for managing state and lifecycle.
 
 ## Running App
 1. Clone repository:
-git clone https://github.com/yourusername/expensetracker.git
+git clone https://github.com/Alicia-Natasha/expensetracker.git
 
 2. Navigate to the project directory:
 cd expensetracker
@@ -33,7 +33,7 @@ npm start
 
 5. Open your browser and go to http://localhost:3000/ to view the app.
 
-## Example Usage
+## How to use App
 
 ### Adding an Expense:
 1. Enter the expense name in the "Expense name" field.
@@ -48,3 +48,12 @@ Use the "Sort By" dropdown to sort expenses by their name or description.
 
 ### Deleting Expenses:
 Click the "Delete" button next to an expense to remove it from the list.
+
+## Author
+Alicia Natasha
+
+## Version History
+0.1v
+
+## License
+This project is open source and available under the MIT License
